@@ -29,10 +29,6 @@ const actions = {
             console.log(error)
         })
     },
-
-    uncheck() {
-        
-    }
 }
 
 const mutations = {
