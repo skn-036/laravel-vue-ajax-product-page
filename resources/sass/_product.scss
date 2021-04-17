@@ -1,0 +1,145 @@
+/******************* Product Page CSS ***********************/ 
+body {
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    line-height: 1.15;
+}
+
+#top-section {
+    background-color: #f1e2e2;
+    border-bottom: 2px solid #999;
+    .top-row {
+        height: 50px;
+        .search {
+            input {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                text-indent: 8px;
+            }
+            input:focus {
+                outline: none;
+            }
+            button {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding: 0 8px;
+            }
+        }
+    }   
+}
+
+#mobile-search {
+    input, button {
+        display: none;
+    }
+    input:focus {
+        outline: none;
+    }
+}
+
+#sidebar {
+    border-right: 2px solid #999;
+    h4 {
+        color: blueviolet;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    #top-section {
+        .top-row {
+            .search {
+                input, button {
+                    display: none;
+                }
+            }
+        }        
+    }
+
+    #mobile-search {
+        margin: 0 10%;
+        input, button {
+            display: block;
+        }
+        input {
+            border: 1px solid #aaa;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        button {
+            padding: 0 5px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    #sidebar {
+        border-right: none;
+        margin-left: 5%;
+    }
+}
+
+#product {
+
+    .product-container {
+        img {
+            max-height: 320px;
+            position: relative;
+        }
+
+        .price {
+            .discount {
+                text-decoration: line-through;
+            }
+        }
+        .discount-percent {
+            position: absolute;
+            top: 7%;
+            right: 7%;
+            padding: 14px 5px;
+            border-radius: 50px;
+            background: red;
+
+            p {
+                color: #fff;
+            }
+        }
+    }
+}
+
+#pagination {
+    ul {
+        width: max-content;
+        margin: auto;
+        .active {
+            .page-link {
+                background: blueviolet;
+                color: #fff !important;
+                border-color: blueviolet;
+            }
+        }
+        .page-item {
+            .page-link {
+                color: #666;
+                margin: 0 2px;
+                border-radius: 5px;
+                border-color: #999;
+            }
+            .page-link:active {
+                outline: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    .product-container {
+        img {
+            margin: 0 12.5%;
+        }
+    }
+}
