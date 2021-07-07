@@ -6,7 +6,7 @@ This repository implements Laravel and Vue.js to show, sort and search products 
 
 First download this repository. Navigate to root of the project and then
 <pre>
-    <code>composer update</code>
+    <code>composer install</code>
     <code>npm install</code>
 </pre>
 
